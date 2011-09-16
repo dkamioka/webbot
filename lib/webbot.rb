@@ -3,10 +3,11 @@ MAILRXP = Regexp.new(/\b[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}\b/)
 
 module webbot
   class url_tree
-    attr_accessor :node
+    attr_accessor :url, :emails, :status, :level
 
     def initialize()
-      @node = Tree::TreeNode.new("Root",0,"")
+      @status = 0
+      
     end
 
     def getmail()
